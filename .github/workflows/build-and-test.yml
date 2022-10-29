@@ -20,5 +20,4 @@ jobs:
           SCHEME: CI
           PROJECT: EssentialFeed.xcodeproj
         run: |
-          filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
           xcodebuild clean build test -project "$PROJECT" -scheme "$SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
