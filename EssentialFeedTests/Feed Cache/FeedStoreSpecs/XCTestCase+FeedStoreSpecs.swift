@@ -137,7 +137,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
             deletionError = receivedDeletionError
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 3)
+        wait(for: [exp], timeout: 5)
         return deletionError
     }
 
