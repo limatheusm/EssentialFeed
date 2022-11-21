@@ -7,6 +7,9 @@
 
 import CoreData
 
+// Core Data is written in Obj-C, so if you're using manual codegen for your managed models,
+// you need to set the @objc name matching the class name in the data model.
+// Otherwise, the Obj-C code won't be able to access your class at runtime (it'll crash!).
 @objc(ManagedCache)
 class ManagedCache: NSManagedObject {
     @NSManaged var timestamp: Date

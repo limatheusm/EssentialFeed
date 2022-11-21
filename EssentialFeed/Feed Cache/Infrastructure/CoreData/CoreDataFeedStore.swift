@@ -60,6 +60,7 @@ public final class CoreDataFeedStore: FeedStore {
 
 private extension CoreDataFeedStore {
     func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
+        // we just need the `context` inside the closure (hold reference), not need holding references to `self`
         let context = self.context
         context.perform { action(context) }
     }
