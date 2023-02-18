@@ -32,4 +32,4 @@ jobs:
           SCHEME: CI_iOS
           PROJECT: EssentialFeed.xcodeproj
         run: |
-          xcodebuild clean build test -project "$PROJECT" -scheme "$SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild clean build test -project "$PROJECT" -scheme "$SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination 'platform=iOS,name=iPhone 12' | xcpretty && exit ${PIPESTATUS[0]}
