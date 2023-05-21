@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import EssentialFeed
 
-public final class FeedViewController: UITableViewController {
+public final class FeedViewController: UITableViewController, FeedErrorView {
+    @IBOutlet private(set) public var errorView: ErrorView?
+
     private var refreshController: FeedRefreshViewController?
 
     var tableModel = [FeedImageCellController]() {
@@ -25,6 +28,10 @@ public final class FeedViewController: UITableViewController {
         refreshControl = refreshController?.view
         tableView.prefetchDataSource = self
         refreshController?.refresh()
+    }
+
+    public func display(_ viewModel: FeedErrorViewModel) {
+        errorView?.message = viewModel.message
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
