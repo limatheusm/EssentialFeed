@@ -119,6 +119,13 @@
 			remoteGlobalIDString = 3730707D28EFA1CE00674C07;
 			remoteInfo = EssentialFeed;
 		};
+		37BC2E0E2A774E4600EFED07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37BC2E0A2A774E4600EFED07 /* EssentialApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37BC2DF32A774E3B00EFED07;
+			remoteInfo = EssentialApp;
+		};
 		37DA26F7290DAC7200C863B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3730707528EFA1CE00674C07 /* Project object */;
@@ -188,6 +195,7 @@
 		37A4D1562A77458D00E1F8CB /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
 		37ACB517290B4DDD00ECC377 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		37B32B0B2923B4EE00F4A978 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
+		37BC2E0A2A774E4600EFED07 /* EssentialApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EssentialApp.xcodeproj; path = EssentialApp/EssentialApp.xcodeproj; sourceTree = "<group>"; };
 		37C686EF2A1A97C20095E339 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		37C686F12A1A97CA0095E339 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		37C686F32A1A97D50095E339 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
@@ -369,6 +377,7 @@
 		3730707428EFA1CE00674C07 = {
 			isa = PBXGroup;
 			children = (
+				37BC2E0A2A774E4600EFED07 /* EssentialApp.xcodeproj */,
 				3730708028EFA1CE00674C07 /* EssentialFeed */,
 				3730708A28EFA1CE00674C07 /* EssentialFeedTests */,
 				37DA26F3290DAC7200C863B3 /* EssentialFeedAPIEndToEndTests */,
@@ -497,6 +506,14 @@
 				37DBD1A62923127B0006A25C /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		37BC2E0B2A774E4600EFED07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37BC2E0F2A774E4600EFED07 /* EssentialApp.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		37C686EE2A1A977C0095E339 /* Feed Presentation */ = {
@@ -742,6 +759,12 @@
 			mainGroup = 3730707428EFA1CE00674C07;
 			productRefGroup = 3730707F28EFA1CE00674C07 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 37BC2E0B2A774E4600EFED07 /* Products */;
+					ProjectRef = 37BC2E0A2A774E4600EFED07 /* EssentialApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3730707D28EFA1CE00674C07 /* EssentialFeed */,
@@ -753,6 +776,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		37BC2E0F2A774E4600EFED07 /* EssentialApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EssentialApp.app;
+			remoteRef = 37BC2E0E2A774E4600EFED07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		370E529D295F9F17005A2241 /* Resources */ = {
