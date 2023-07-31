@@ -5,8 +5,8 @@
 //  Created by Matheus Lima on 5/21/23.
 //
 
-import EssentialFeed
 import UIKit
+import EssentialFeed
 import EssentialFeediOS
 
 final class FeedViewAdapter: FeedView {
@@ -19,19 +19,15 @@ final class FeedViewAdapter: FeedView {
     }
 
     func display(_ viewModel: FeedViewModel) {
-        controller?.tableModel = viewModel.feed.map { model in
-            let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(
-                model: model,
-                imageLoader: imageLoader
-            )
+        controller?.display(viewModel.feed.map { model in
+            let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(model: model, imageLoader: imageLoader)
             let view = FeedImageCellController(delegate: adapter)
 
             adapter.presenter = FeedImagePresenter(
                 view: WeakRefVirtualProxy(view),
-                imageTransformer: UIImage.init
-            )
+                imageTransformer: UIImage.init)
 
             return view
-        }
+        })
     }
 }
