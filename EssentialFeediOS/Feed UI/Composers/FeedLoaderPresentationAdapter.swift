@@ -7,7 +7,7 @@
 
 import EssentialFeed
 
-final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDelegate {
+final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
     private let feedLoader: FeedLoader
     var presenter: FeedPresenter?
 
@@ -29,4 +29,3 @@ final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDelegate {
         }
     }
 }
-
